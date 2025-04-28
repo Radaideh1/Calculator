@@ -5,19 +5,25 @@ int main() {
 
 	double theFirstNumber, number;
 	char ope;
-	double end;
+	double end = 0;
 
 	cin >> theFirstNumber;
 	
 	
+	while (true) {
 
-	cin >> ope;
-	
-	cin >> number;
+		cin >> ope;
+		if (ope == '=')
+			break;
 
-	end = basicOps(theFirstNumber, ope, number);
+		cin >> number;
+
+		end += basicOps(ope, number);
+
+	}
+	cout << end + theFirstNumber;
 	
-	cout << end;
+	
 
 	
 	
